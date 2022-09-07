@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+:root{--rotation: 135deg;}
+html{min-height: 100%;}
+body{
+	padding: 0;
+	margin: 0;
+	min-height: 100%;
+	font-family: 'Alata', sans-serif;
+	background: #CB061D;
+	background: -moz-linear-gradient(var(--rotation, 135deg), #CB061D 50%, #191919 50%);
+	background: -webkit-linear-gradient(var(--rotation, 135deg), #CB061D 50%, #191919 50%);
+	background: linear-gradient(var(--rotation, 135deg), #CB061D 50%, #191919 50%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#8b0000",GradientType=1); 
+}
+header, body, main, .text, footer{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #fff;
+}
+.text{margin: 1rem;}
+.text p {margin: 0;}
+p{text-align: center;}
+img{max-width: 35vmin;}
+
+footer{margin-bottom: 2rem;}
+
+#projects{
+	width: 90%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+a{color: #888;}
+a:hover{color: #eee}
+#projects a{
+	font-size: 1.5rem;
+	font-weight: bold;
+	padding: 0.25rem 1rem;
+	text-align: center;
+}
+
+#MatrixRain:hover{color: #00d17d;}
+#ExpandingColor:hover{color: #ee2288;}
+
+html{
+	scrollbar-color: #181919 #ed1b2f;
+	scrollbar-width: thin;
+}
+::-webkit-scrollbar {
+	width: 0.5rem;
+}
+::-webkit-scrollbar-thumb{background: #181919;}
+::-webkit-scrollbar-track{background: #ed1b2f;}
