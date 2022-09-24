@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 :root{--rotation: 135deg;}
-html{min-height: 100%;}
+html{
+	min-height: 100%;
+	position: relative;
+}
 body{
-	padding: 0;
+	padding: 0 20px;
 	margin: 0;
 	min-height: 100%;
 	font-family: 'Alata', sans-serif;
@@ -20,10 +23,8 @@ header, body, main, .text, footer{
 }
 .text{margin: 1rem;}
 .text p {margin: 0;}
-p{text-align: center;}
-img{max-width: 35vmin;}
-
-footer{margin-bottom: 2rem;}
+p, h1, h2, div, span, a, h3{text-align: center;}
+img{max-width: min(32vmax, 30vh);}
 
 #projects{
 	width: 90%;
@@ -35,7 +36,7 @@ footer{margin-bottom: 2rem;}
 a{color: #888;}
 a:hover{color: #eee}
 #projects a{
-	font-size: 1.5rem;
+	font-size: 1rem;
 	font-weight: bold;
 	padding: 0.25rem 1rem;
 	text-align: center;
@@ -45,11 +46,12 @@ a:hover{color: #eee}
 #ExpandingColor:hover{color: #ee2288;}
 
 html{
-	scrollbar-color: #181919 #ed1b2f;
+	scrollbar-color: #181919 #CB061D;
 	scrollbar-width: thin;
 }
-::-webkit-scrollbar {
-	width: 0.5rem;
+::-webkit-scrollbar {width: 0.5rem;}
+::-webkit-scrollbar-thumb{
+	background: #181919;
+	border: 2px #CB061D solid;
 }
-::-webkit-scrollbar-thumb{background: #181919;}
-::-webkit-scrollbar-track{background: #ed1b2f;}
+::-webkit-scrollbar-track{background: #CB061D;}
