@@ -5,8 +5,8 @@ let width;
 let height;
 
 function setup(){
-	width = document.body.offsetWidth;
-	height = document.body.offsetHeight;
+	width = document.documentElement.scrollWidth;
+	height = document.documentElement.scrollHeight;
 
 	let hyp = Math.sqrt((width**2)+(height**2));
 	let deg = 180 + Math.acos(width/hyp)*(180/Math.PI);
