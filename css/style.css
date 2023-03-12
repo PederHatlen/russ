@@ -1,54 +1,92 @@
+/* Image first, for no flickering */
+#russebilde{
+	max-width: min(40vmin, 30vh);
+	rotate: -10deg;
+	justify-self: center
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 :root{--rotation: 135deg;}
-html{
-	min-height: 100%;
-	position: relative;
-}
-body{
-	padding: 0 20px;
-	margin: 0;
-	min-height: 100%;
-	font-family: 'Alata', sans-serif;
-	background: #CB061D;
-	background: -moz-linear-gradient(var(--rotation, 135deg), #CB061D 50%, #191919 50%);
-	background: -webkit-linear-gradient(var(--rotation, 135deg), #CB061D 50%, #191919 50%);
-	background: linear-gradient(var(--rotation, 135deg), #CB061D 50%, #191919 50%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#8b0000",GradientType=1); 
-}
-header, body, main, .text, footer{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	color: #fff;
-}
-.text{margin: 1rem;}
-.text p {margin: 0;}
-p, h1, h2, div, span, a, h3{text-align: center;}
-img{max-width: min(32vmax, 30vh);}
-
-#projects{
-	width: 90%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-}
-a{color: #888;}
-a:hover{color: #eee}
-#projects a{
-	font-size: 1rem;
-	font-weight: bold;
-	padding: 0.25rem 1rem;
-	text-align: center;
-}
-
-#MatrixRain:hover{color: #00d17d;}
-#ExpandingColor:hover{color: #ee2288;}
-
 html{
 	scrollbar-color: #181919 #CB061D;
 	scrollbar-width: thin;
 }
+body{
+	display: grid;
+	grid-template: auto 1fr auto/1fr;
+	justify-items: center;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+	min-height: 100vh;
+	color: white;
+	font-family: 'Alata', sans-serif;
+	background: #CB061D;
+	background: linear-gradient(var(--rotation, 135deg), #CB061D 50%, #191919 50%);
+}
+header, footer{
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1em;
+	margin: 20px;
+}
+
+header{font-size: 0.75rem;}
+
+header h1{
+	margin: 0;
+	font-weight: normal;
+}
+header img{height: 0.75em;}
+
+main{
+	width: 80%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(50vmin, 1fr));
+	align-items: center;
+	justify-items: center;
+	padding-bottom: 1rem;
+}
+.text{
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	font-size: 1.3rem;
+}
+.text img{
+	align-self: flex-start;
+	height: 3em;
+}
+.text h3{padding: 0 1.5rem;}
+dl{
+	padding: 0 1.5rem;
+	margin: 0;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 0.5rem 1rem;
+}
+dd{
+	margin: 0;
+	grid-column: 2;
+}
+.text #tlf{word-break: break-all;}
+
+h1, h2, h3{
+	margin: 0;
+	text-align: center;
+	width: fit-content;
+}
+a{color: #ddd;}
+a:hover{color: #888}
+p{margin: 0;}
+
+#mainPageLink{
+	white-space: nowrap;
+}
+
 ::-webkit-scrollbar {width: 0.5rem;}
 ::-webkit-scrollbar-thumb{
 	background: #181919;
